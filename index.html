@@ -5,30 +5,55 @@
         <title>Scary Stories</title>
     </head>
     <body>
+        /*
+        * Woo, you checked the source! Good for you!
+        */
         <script>
-var myName = prompt("What is your name?")
-console.log(myName)
+        var myName = prompt("What is your name?");
+        console.log(myName);
+        if(myName.toLowerCase="null")
+        {
+            alert("Please for the love of God, don't do that");
+        }
+        else
+        {
+            alert(Welcome to the Game," +myName+" may the odds ever be in your favor");
+        }
+        
+        //Start of actual game
             alert("This is an Adventure Game, It goes as you please, as you desire, LET US START!");
-            var myChoice = prompt ("So, do you like scary stories, "+myName+"?")
+            var myChoice = prompt ("So, do you like scary stories, "+myName+"?");
+            console.log(myChoice);
             if(myChoice.toLowerCase()== "yes")
             {
                 alert("So we depart on our journey...");
             }
-            else
+            else if(myChoice.toLowerCase()== "no")
             {
                 alert("This is gonna be FUN! MUHUHAHA!");
             }
-            var alone = prompt ("Your at home, ALONE, not expecting anyone, watching the TV and hear a knock on the door. You hear more banging on the door. Your heatbeat speeds up and your petrified. What do you do? A) Ignore the knocking nervously. B) Start screaming your head off. C) Couragously go and open the door. Chose A, B, or C ")
-                                if (alone.toUpperCase() == "C")
-            {
-                alert(myName+", WOW! You are couragous! Sadly your bravery comes to an end when you find that it was just your friends pranking you. You guys go take a walk.");
-            }
             else
+            {
+                alert("Please answer Yes or No")
+            }
+            
+            var alone = prompt ("Your at home, ALONE, not expecting anyone, watching the TV and hear a knock on the door. You hear more banging on the door. Your heatbeat speeds up and you're petrified. What do you do?A) Ignore the knocking nervously. B) Start screaming your head off. C) Couragously go and open the door. Chose A, B, or C ")
+            if (alone.toLowerCase() == "c")
+            {
+                alert(+myName+", WOW! You are couragous! Sadly your bravery comes to an end when you find that it was just your friends pranking you. You guys go take a walk.");
+            }
+            else if (alone.toLowerCase() == "b")
+            {
+                alert (+myName+", too bad because they was your friends pulling a prank on you. You actually fell for it! You guys go take a walk.");
+            }
+            else if (alone.toLowerCase() == "a")
             {
                 alert (+myName+", too bad because they was your friends pulling a prank on you. You actually fell for it! You guys take a walk.");
             }
+            
+            //Chunck 2 of the game
             var rumors = prompt("Your friends tell you that rumors are circulating about 'Chain-Saw Billy' the new boogyman around town. He catches his victems and tortures them till death with his chainsaw. You and your buds hear a yell then a chainsaw starting up! You look back and see 'Chain-Saw Billy' cutting off a mans head... He comes sprinting after you. What do you do? A) Run away screaming your head off. B) Stand your ground and try to protect you and your friends. C)Go try to get help.")
-            if(rumors.toUpperCase()=="B")
+            if(rumors.toLowerCase()=="b")
             {
                 alert("Boy! You have the guts!");
             }
@@ -37,9 +62,9 @@ console.log(myName)
                 alert("Your cowardness doesnt save you! Sorry!");
             }    
                 var runafter = prompt ("You run home sprint up the stairs, jump under the bed and hide. You hear 'Chain-Saw Billy' capture your friend. What do you do? A)Get tired of all this stuff and suicide out the window. B)Choke yourself. C)Try to protect yourself with anything you can find.")
-                if (runafter.toUpperCase()=="C")
+                if (runafter.toLowerCase()=="c")
                 {
-                    alert("Sorry you get killed in inexplicable ways");
+                    alert("Sorry, you get killed in inexplicable ways");
                 }
             else
             { 
