@@ -24,25 +24,23 @@ function game() {
   }
 
   var alone = prompt(
-      "You're at home, alone, watching the TV and hear a knock on the door. You hear more banging on the door. Your heatbeat speeds up and you're very scared. What do you do?\n
-      A) Ignore the knocking nervously. B) Start screaming your head off. C) Couragously go and open the door. Please choose A, B, or C "
+      "You're at home, alone, watching the TV and hear a knock on the door. You hear more banging on the door. Your heatbeat speeds up and you're very scared. What do you do? A) Ignore the knocking nervously. B) Start screaming your head off. C) Couragously go and open the door. Please choose A, B, or C "
   );
 
   if (alone.toLowerCase() == "c") {
       alert(name + " , WOW! You are very couragous! Sadly your bravery comes to an end when you find that it was just your friends pranking you. You guys go take a walk.");
   } else if (alone.toLowerCase() == "a" || alone.toLowerCase() == "b") {
-      alert(name + " , too bad, because it actually was your friends just pulling a prank on you.
-      You actually fell for it! You guys decide take a walk.");
+      alert(name + " , too bad, because it actually was your friends just pulling a prank on you. You actually fell for it! You guys decide take a walk.");
   };
 
 
   var rumors = prompt(
-      "Your friends tell you that rumors are circulating about 'Chain-Saw Billy' the new boogyman around town.\n
-      He catches his victems and tortures them till death with his chainsaw. You and your buds hear a yell then a chainsaw starting up!\n
-      You look back and see 'Chain-Saw Billy' cutting off a mans' head. He comes sprinting after you. What do you do?\n
-      A) Run away screaming your head off.\n
-      B) Stand your ground and try to protect you and your friends.\n
-      C) Go try to get help.\n"
+      "Your friends tell you that rumors are circulating about 'Chain-Saw Billy' the new boogyman around town.
+      He catches his victems and tortures them till death with his chainsaw. You and your buds hear a yell then a chainsaw starting up!
+      You look back and see 'Chain-Saw Billy' cutting off a mans' head. He comes sprinting after you. What do you do?
+      A) Run away screaming your head off.
+      B) Stand your ground and try to protect you and your friends.
+      C) Go try to get help."
   );
 
   if (rumors.toLowerCase() == "b") {
@@ -52,10 +50,7 @@ function game() {
   };
 
   var runafter = prompt(
-      "You run home sprint up the stairs, jump under the bed and hide. You hear 'Chain-Saw Billy' capture your friend. What do you do?
-      A) Get tired of all this stuff and suicide out the window.
-      B) Choke yourself.
-      C) Try to protect yourself with anything you can find."
+      "You run home sprint up the stairs, jump under the bed and hide. You hear 'Chain-Saw Billy' capture your friend. What do you do? A) Get tired of all this stuff and suicide out the window. B) Choke yourself. C) Try to protect yourself with anything you can find."
   );
 
   if (runafter.toLowerCase() == "c") {
