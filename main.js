@@ -1,11 +1,16 @@
 function game() {
 'use strict';
 
-  var name = prompt("What is your name?");
+  function getName(){
+    var name = prompt("What is your name?");
+    return name;
+  }
+  name = getName();
+
   function nameCheck(){
     if (name === "") {
       alert("Please give a valid name!");
-      getName();
+      name = getName();
     }
   }
 
