@@ -2,15 +2,12 @@ function game() {
 'use strict';
 
   var name = prompt("What is your name?");
-
-  getName();
-
   function nameCheck(){
-    if (name = "") {
-      alert = "Please give a valid name!"
+    if (name === "") {
+      alert("Please give a valid name!");
       getName();
-    };
-  };
+    }
+  }
 
   alert("Welcome to the game , " + name + " may the odds ever be in your favor!");
 
@@ -22,7 +19,7 @@ function game() {
   } else if (myChoice.toLowerCase() == "no") {
       alert("This is gonna be FUN! MUHUHAHA!");
   } else {
-      alert("Please answer Yes or No")
+      alert("Please answer Yes or No");
   }
 
   var alone = prompt(
@@ -39,15 +36,18 @@ function game() {
 
   var rumors = prompt(
       "Your friends tell you that rumors are circulating about 'Chain-Saw Billy' the new boogyman around town. He catches his victems and tortures them till death with his chainsaw. You and your buds hear a yell then a chainsaw starting up! You look back and see 'Chain-Saw Billy' cutting off a mans head... He comes sprinting after you. What do you do? A) Run away screaming your head off. B) Stand your ground and try to protect you and your friends. C)Go try to get help."
-  )
+  );
+
   if (rumors.toLowerCase() == "b") {
       alert("Boy! You have the guts!");
   } else {
       alert("Your cowardliness doesn't save you! Sorry!");
   }
+
   var runafter = prompt(
       "You run home sprint up the stairs, jump under the bed and hide. You hear 'Chain-Saw Billy' capture your friend. What do you do? A)Get tired of all this stuff and suicide out the window. B) Choke yourself. C) Try to protect yourself with anything you can find."
-  )
+  );
+
   if (runafter.toLowerCase() == "c") {
       alert("Sorry, you get killed in inexplicable ways");
   } else {
@@ -58,5 +58,5 @@ function game() {
       alert("Thanks for playing this Adventure Game!");
       console.log('Thanks for playing the Scary Story Game!');
     }
-  done()
+  done();
 }
