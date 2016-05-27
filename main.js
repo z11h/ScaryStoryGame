@@ -69,6 +69,7 @@ function game() {
   } else if(rumors.toLowerCase() == "a" || rumors.toLowerCase() == "c"){
       alert("Your cowardliness doesn't save you! He gets you! Sorry!");
       done();
+      return;
   } else {
     checkRumors();
   }
