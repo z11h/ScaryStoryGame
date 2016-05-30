@@ -27,14 +27,14 @@ function game() {
       checkMyChoice();
   }
 
-  function checkMyChoice(){
+  function checkMyChoice() {
     if (myChoice.toLowerCase !== "yes" || myChoice.toLowerCase !== "no"){
       alert("Please answer 'yes' or 'no'");
       checkMyChoice();
     }
   }
 
- function checkAlone(){
+ function checkAlone() {
    if (alone.toLowerCase() !== "a" || alone.toLowerCase() !== "b" || alone.toLowerCase() !== "c"){
      alert("Please respond with 'a', 'b', or 'c'!");
      checkAlone();
@@ -59,7 +59,7 @@ function game() {
       "Your friends tell you that rumors are circulating about 'Chain-Saw Billy' the new boogyman around town. He catches his victems and tortures them until death with his chainsaw. You and your buds hear a yell then a chainsaw starting up! \nYou look back and see 'Chain-Saw Billy' cutting off a mans head... He looks at you and comes sprinting after you. What do you do? \nA) Run away screaming your head off. \nB) Stand your ground and try to protect you and your friends. \nC) Go try to get help."
   );
 
-  function checkRumors(){
+  function checkRumors() {
     if (rumors.toLowerCase() !== "a" || rumors.toLowerCase() !== "b" || rumors.toLowerCase() !== "c") {
       alert("Please respond with 'a', 'b', or 'c'!");
       checkRumors();
@@ -94,7 +94,7 @@ function game() {
     checkRunAfter();
   }
 
-  function done(){
+  function done() {
     alert("Thanks for playing this Adventure Game!");
     return;
   }
