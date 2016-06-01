@@ -10,6 +10,7 @@ function game() {
         checkName();
       }
     }
+
   // Check the entered name
   checkName();
 
@@ -58,18 +59,16 @@ function game() {
     checkAlone();
   }
 
-  var rumors = prompt(
-      "Your friends tell you that rumors are circulating about 'Chain-Saw Billy' the new boogyman around town. He catches his victems and tortures them until death with his chainsaw. You and your buds hear a yell then a chainsaw starting up! \nYou look back and see 'Chain-Saw Billy' cutting off a mans head... He looks at you and comes sprinting after you. What do you do? \nA) Run away screaming your head off. \nB) Stand your ground and try to protect you and your friends. \nC) Go try to get help."
-  );
-
   function checkRumors() {
     if (rumors.toLowerCase() != "a" || rumors.toLowerCase() != "b" || rumors.toLowerCase() != "c") {
       alert("Please respond with 'a', 'b', or 'c'!");
-      rumors = prompt(
-          "Your friends tell you that rumors are circulating about 'Chain-Saw Billy' the new boogyman around town. He catches his victems and tortures them until death with his chainsaw. You and your buds hear a yell then a chainsaw starting up! \nYou look back and see 'Chain-Saw Billy' cutting off a mans head... He looks at you and comes sprinting after you. What do you do? \nA) Run away screaming your head off. \nB) Stand your ground and try to protect you and your friends. \nC) Go try to get help."
-      );
+      rumors = prompt("Your friends tell you that rumors are circulating about 'Chain-Saw Billy' the new boogyman around town. He catches his victems and tortures them until death with his chainsaw. You and your buds hear a yell then a chainsaw starting up! \nYou look back and see 'Chain-Saw Billy' cutting off a mans head... He looks at you and comes sprinting after you. What do you do? \nA. Run away screaming your head off. \nB. Stand your ground and try to protect you and your friends. \nC. Go try to get help.");
     }
   }
+
+  var rumors = prompt(
+      "Your friends tell you that rumors are circulating about 'Chain-Saw Billy' the new boogyman around town. He catches his victems and tortures them until death with his chainsaw. You and your buds hear a yell then a chainsaw starting up! \nYou look back and see 'Chain-Saw Billy' cutting off a mans head... He looks at you and comes sprinting after you. What do you do? \nA. Run away screaming your head off. \nB. Stand your ground and try to protect you and your friends. \nC. Go try to get help."
+  );
 
   if (rumors.toLowerCase() === "b") {
       alert("Boy! You have the guts!");
@@ -80,21 +79,21 @@ function game() {
   }
 
   function checkRunAfter() {
-    if (runafter.toLowerCase() != "a" || runafter.toLowerCase() != "b" || runafter.toLowerCase() != "c") {
+    if (runAfter.toLowerCase() != "a" || runAfter.toLowerCase() != "b" || runAfter.toLowerCase() != "c") {
       alert("Please respond with 'a', 'b', or 'c'!");
-      runafter = prompt(
+      runAfter = prompt(
           "You run home sprint up the stairs, jump under the bed and hide. You hear 'Chain-Saw Billy' capture your friend. What do you do? \nA) Get tired of all this stuff and suicide out the window. \nB) Choke yourself. \nC) Try to protect yourself with anything you can find."
       );
     }
   }
 
-  var runafter = prompt(
+  var runAfter = prompt(
       "You run home sprint up the stairs, jump under the bed and hide. You hear 'Chain-Saw Billy' capture your friend. What do you do? \nA) Get tired of all this stuff and suicide out the window. \nB) Choke yourself. \nC) Try to protect yourself with anything you can find."
   );
 
-  if (runafter.toLowerCase() === "c") {
+  if (runAfter.toLowerCase() === "c") {
       alert("Sorry, you get killed in inexplicable ways");
-  } else if (runafter.toLowerCase() === "a" || runafter.toLowerCase() === "b"){
+  } else if (runAfter.toLowerCase() === "a" || runAfter.toLowerCase() === "b"){
       alert("You'd kill yourself?! Wow must be depressed! Please call the local Suicide Hotline!");
   } else {
     checkRunAfter();
