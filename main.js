@@ -34,11 +34,11 @@ function game() {
     }
 
     function checkAlone() {
-      while (rumors != "a" || rumors != "b" || rumors != "c") {
+      while (alone != "a" || alone != "b" || alone != "c") {
         alert("Please respond with 'a', 'b', or 'c'!");
         alone = prompt(
           "You're at home, alone, watching the TV and hear a knock on the door. You hear more banging on the door. Your heatbeat speeds up and you're very scared. What do you do? \nA) Ignore the knocking nervously. \nB) Start screaming your head off. \nC) Couragously go and open the door. \nPlease choose A, B, or C "
-        );
+        ).toLowerCase().trim();
       }
     }
 
@@ -61,13 +61,15 @@ function game() {
     function checkRumors() {
       if (rumors != "a" || rumors != "b" || rumors != "c") {
         alert("Please respond with 'a', 'b', or 'c'!");
-        rumors = prompt("Your friends tell you that rumors are circulating about 'Chain-Saw Billy' the new boogyman around town. He catches his victems and tortures them until death with his chainsaw. You and your buds hear a yell then a chainsaw starting up! \nYou look back and see 'Chain-Saw Billy' cutting off a mans head... He looks at you and comes sprinting after you. What do you do? \nA. Run away screaming your head off. \nB. Stand your ground and try to protect you and your friends. \nC. Go try to get help.");
+        rumors = prompt(
+          "Your friends tell you that rumors are circulating about 'Chain-Saw Billy' the new boogyman around town. He catches his victems and tortures them until death with his chainsaw. You and your buds hear a yell then a chainsaw starting up! \nYou look back and see 'Chain-Saw Billy' cutting off a mans head... He looks at you and comes sprinting after you. What do you do? \nA. Run away screaming your head off. \nB. Stand your ground and try to protect you and your friends. \nC. Go try to get help."
+        ).toLowerCase().trim();
       }
     }
 
     var rumors = prompt(
       "Your friends tell you that rumors are circulating about 'Chain-Saw Billy' the new boogyman around town. He catches his victems and tortures them until death with his chainsaw. You and your buds hear a yell then a chainsaw starting up! \nYou look back and see 'Chain-Saw Billy' cutting off a mans head... He looks at you and comes sprinting after you. What do you do? \nA. Run away screaming your head off. \nB. Stand your ground and try to protect you and your friends. \nC. Go try to get help."
-    );
+    ).toLowerCase().trim();
 
     if (rumors === "b") {
       alert("Boy! You have the guts!");
@@ -82,7 +84,7 @@ function game() {
         alert("Please respond with 'a', 'b', or 'c'!");
         runAfter = prompt(
           "You run home sprint up the stairs, jump under the bed and hide. You hear 'Chain-Saw Billy' capture your friend. What do you do? \nA) Get tired of all this stuff and suicide out the window. \nB) Choke yourself. \nC) Try to protect yourself with anything you can find."
-        );
+        ).toLowerCase().trim();
       }
     }
 
