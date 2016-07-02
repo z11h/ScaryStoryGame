@@ -74,13 +74,13 @@ function game() {
     if (rumors === "b") {
       alert("Boy! You have the guts!");
     } else if (rumors === "a" || rumors === "c") {
-      alert("Your cowardliness doesn't save you! He gets you! Sorry! \n \n BUT, you still manage to excape him!");
+      alert("Your cowardliness doesn't save you! He gets you! Sorry! \nBUT, you still manage to excape him!");
     } else {
       checkRumors();
     }
 
     function checkRunAfter() {
-      if (runAfter != "a" || runAfter != "b" || runAfter != "c") {
+      while (runAfter != "a" || runAfter != "b" || runAfter != "c") {
         alert("Please respond with 'a', 'b', or 'c'!");
         runAfter = prompt(
           "You run home sprint up the stairs, jump under the bed and hide. You hear 'Chain-Saw Billy' capture your friend. What do you do? \nA) Get tired of all this stuff and suicide out the window. \nB) Choke yourself. \nC) Try to protect yourself with anything you can find."
@@ -105,3 +105,4 @@ function game() {
     }
 
   }
+}
