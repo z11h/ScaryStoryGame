@@ -1,13 +1,20 @@
 function game() {
   'use strict';
 
+  var promp = window.prompt;
+  var alert = window.alert;
+
   var name = prompt("What is your name?").toLowerCase().trim();
+
+  var positive = ["yes", "yep", "yeah!", "yeah", "yess", "y", "sure"];
+  var reject = ["no", "nah", "noo", "never!", "nope", "n", "nahh", "never"];
 
   function checkName() {
     while (name === "" || name === null) {
       alert("Please give a valid name!");
       name = prompt("What is your name?").toLowerCase().trim();
     }
+  }
 
     // Check the entered name
     checkName();
@@ -17,17 +24,17 @@ function game() {
     alert("This is an Adventure Game, It goes as you please, as you desire. \nLET US START!");
 
     function checkMyChoice() {
-      while (myChoice.toLowerCase != "yes" || myChoice.toLowerCase != "no") {
-        alert("Please answer 'yes' or 'no'");
+      while (!(positive.inclues(myChoice) || negative.includes(myChoice))) {
+        alert("Please answer with a valid response!");
         myChoice = prompt("So, do you like scary stories, " + name + "?").toLowerCase().trim();
       }
     }
 
     var myChoice = prompt("So, do you like scary stories, " + name + "?").toLowerCase().trim();
 
-    if (myChoice === "yes") {
+     if (positive.inclues(myChoice)) {
       alert("So we depart on our journey...");
-    } else if (myChoice === "no") {
+    } else if (negative.includes(myChoice)) {
       alert("This is gonna be FUN! Haha!");
     } else {
       checkMyChoice();
@@ -46,16 +53,16 @@ function game() {
       "You're at home, alone, watching the TV and hear a knock on the door. You hear more banging on the door. Your heatbeat speeds up and you're very scared. What do you do? \nA) Ignore the knocking nervously. \nB) Start screaming your head off. \nC) Couragously go and open the door. \nPlease choose A, B, or C "
     ).toLowerCase().trim();
 
-    if (alone === "c") {
-      alert(name + " , WOW! You are very couragous! Sadly your bravery comes to an end when you find that it was just your friends pranking you. You guys go take a walk.");
-    } else if (alone === "b") {
-      alert(name + " , too bad because they was your friends pulling a prank on you. You actually fell for it! You guys go take a walk.");
-    } else if (alone === "a") {
-      alert(name + " , too bad because it was your friends just pulling a prank on you. You actually fell for it! You guys decide take a walk.");
-    } else if (alone === "" || alone === undefined) {
-      checkAlone();
-    } else {
-      checkAlone();
+    switch (alone) {
+      case "a":
+      case "b":
+        alert(name + " , too bad because they was your friends pulling a prank on you. You actually fell for it! You guys decide to go take a walk.");
+        break;
+      case "c":
+        alert(name + " , WOW! You're very couragous! Sadly your bravery comes to an end when you find that it was just your friends pranking you. You guys decide to go take a walk.");
+        break;
+      default:
+        checkAlone();
     }
 
     function checkRumors() {
@@ -71,11 +78,15 @@ function game() {
       "Your friends tell you that rumors are circulating about 'Chain-Saw Billy' the new boogyman around town. He catches his victems and tortures them until death with his chainsaw. You and your buds hear a yell then a chainsaw starting up! \nYou look back and see 'Chain-Saw Billy' cutting off a mans head... He looks at you and comes sprinting after you. What do you do? \nA. Run away screaming your head off. \nB. Stand your ground and try to protect you and your friends. \nC. Go try to get help."
     ).toLowerCase().trim();
 
-    if (rumors === "b") {
-      alert("Boy! You have the guts!");
-    } else if (rumors === "a" || rumors === "c") {
-      alert("Your cowardliness doesn't save you! He gets you! Sorry! \nBUT, you still manage to excape him!");
-    } else {
+    switch (rumors) {
+      case a:
+      case c:
+        alert("Your cowardliness doesn't save you! He gets you! Sorry! \nBUT, you still manage to excape him!");
+        break;
+      case 'b':
+        alert("Boy! You have the guts!");
+        break;
+      default:
       checkRumors();
     }
 
@@ -105,4 +116,3 @@ function game() {
     }
 
   }
-}
