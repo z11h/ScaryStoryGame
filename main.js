@@ -6,8 +6,8 @@ function game() {
 
   var name = prompt("What is your name?").toLowerCase().trim();
 
-  var positive = ["yes", "yep", "yeah!", "yeah", "yess", "y", "sure"];
-  var reject = ["no", "nah", "noo", "never!", "nope", "n", "nahh", "never"];
+  var positive = ["yes", "yep", "yeah", "yess", "y", "sure"];
+  var reject = ["no", "nah", "noo", "nope", "n", "nahh", "never"];
 
   function checkName() {
     while (name === "" || name === null) {
@@ -30,7 +30,7 @@ function game() {
       }
     }
 
-    var myChoice = prompt("So, do you like scary stories, " + name + "?").toLowerCase().trim();
+    var myChoice = prompt("So, do you like scary stories, " + name + "?").toLowerCase().trim().replace('!', '');
 
      if (positive.inclues(myChoice)) {
       alert("So we depart on our journey...");
@@ -103,12 +103,16 @@ function game() {
       "You run home sprint up the stairs, jump under the bed and hide. You hear 'Chain-Saw Billy' capture your friend. What do you do? \nA) Get tired of all this stuff and suicide out the window. \nB) Choke yourself. \nC) Try to protect yourself with anything you can find."
     ).toLowerCase().trim();
 
-    if (runAfter === "c") {
-      alert("Sorry, you get killed in inexplicable ways");
-    } else if (runAfter === "a" || runAfter === "b") {
-      alert("You'd kill yourself?! Wow must be depressed! Please call the local Suicide Hotline!");
-    } else {
-      checkRunAfter();
+    switch (runAfter) {
+      case 'a':
+      case 'b':
+        alert("You'd kill yourself?! Wow must be depressed! Please call the local Suicide Hotline!");
+        break;
+      case 'c':
+        alert("Sorry, you get killed in inexplicable ways");
+        break;
+      default:
+        checkRunAfter();
     }
 
     function done() {
