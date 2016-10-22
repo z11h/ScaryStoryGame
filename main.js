@@ -4,7 +4,7 @@ function game() {
   var promp = window.prompt;
   var alert = window.alert;
 
-  var name = prompt("What is your name?").toLowerCase().trim();
+  var name = prompt("What's your name?").toLowerCase().trim();
 
   var positive = ["yes", "yep", "yeah", "yess", "y", "sure"];
   var reject = ["no", "nah", "noo", "nope", "n", "nahh", "never"];
@@ -12,7 +12,7 @@ function game() {
   function checkName() {
     while (name === "" || name === null) {
       alert("Please give a valid name!");
-      name = prompt("What is your name?").toLowerCase().trim();
+      name = prompt("What's your name?").toLowerCase().trim();
     }
   }
 
@@ -94,7 +94,7 @@ function game() {
       while (runAfter != "a" || runAfter != "b" || runAfter != "c") {
         alert("Please respond with 'a', 'b', or 'c'!");
         runAfter = prompt(
-          "You run home sprint up the stairs, jump under the bed and hide. You hear 'Chain-Saw Billy' capture your friend. What do you do? \nA) Get tired of all this stuff and suicide out the window. \nB) Choke yourself. \nC) Try to protect yourself with anything you can find."
+          "You run home sprint up the stairs, jump under the bed, and hide. You hear 'Chain-Saw Billy' capture your friend. What do you do? \nA) Get tired of all this stuff and suicide out the window. \nB) Choke yourself. \nC) Try to protect yourself with anything you can find."
         ).toLowerCase().trim();
       }
     }
@@ -106,10 +106,10 @@ function game() {
     switch (runAfter) {
       case 'a':
       case 'b':
-        alert("You'd kill yourself?! Wow must be depressed! Please call the local Suicide Hotline!");
+        alert("You'd kill yourself?! Wow, you must be depressed! Please do contact the local Suicide Hotline!");
         break;
       case 'c':
-        alert("Sorry, you get killed in inexplicable ways");
+        alert("Sorry, but you get killed in inexplicable ways");
         break;
       default:
         checkRunAfter();
@@ -117,6 +117,7 @@ function game() {
 
     function done() {
       alert("Thanks for playing this Adventure Game!");
+      console.log('*-----Thanks!-----*')
     }
 
   }
